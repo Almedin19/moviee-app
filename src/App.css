@@ -1,38 +1,225 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.loginpage {
+  width: 100%;
+  height: 520px;
+  background: rgb(0, 0, 0, 0.4)
+    url("https://wallpapercave.com/dwp2x/wp11871820.png");
+  background-size: 100% 100vh;
+  background-blend-mode: darken;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.marque {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  /* background-color: rgb(236, 90, 90, 0.3); */
+  color: rgb(219, 57, 57);
+}
+
+.form-container {
+  margin: 40px auto;
+  padding: 25px;
+  width: 22%;
+  display: flex;
+  justify-content: center;
+  border: 2px solid rgb(219, 57, 57);
+  box-shadow: 0px 0px 15px 0px #858588;
+  border-radius: 10px;
+  background-color: rgb(11, 11, 11, 0.9);
+}
+
+.padding-container {
+  text-align: center;
+}
+
+.form-control form {
+  padding: 14px;
+}
+
+.form-control input {
+  width: 220px;
+  padding: 10px;
+  display: block;
+  margin: 50px;
+  outline: none;
+  border-radius: 5px;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.form-control input:focus {
+  border: 2px solid rgb(164, 33, 33);
+}
+
+.form-control button {
+  width: 140px;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+.form-control button:hover {
+  background-color: rgb(164, 33, 33);
+  color: rgb(255, 255, 255);
+}
+
+.container-header {
+  position: fixed;
+  background-color: black;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0px;
+  padding: 7px;
+  z-index: 9999999999;
+}
+
+.view-image img {
+  width: 250px;
+  height: 290px;
+  border-radius: 10px;
+  margin-right: 10px;
+  box-shadow: 0px 0px 25px 0px #a2a1a1;
+}
+
+.producte-de {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.producte-de .view-product {
+  width: 500px;
+  padding: 10px;
+}
+
+.prod-grid {
+  color: rgb(219, 219, 57);
+}
+
+.prod-grid table {
+  padding: 5px;
+}
+
+.view-product table td {
+  color: rgb(219, 219, 57);
+  padding: 5px;
+}
+
+.logut-btn {
+  position: fixed;
+  color: white;
+  width: "80px";
+  border-radius: 10px;
+  z-index: 9999999999999999;
+  margin-top: 15px;
+  left: 1100px;
+  padding: 10px;
+  background: red;
+  cursor: pointer;
+  border: none;
+}
+
+.container-header svg {
+  margin-left: 20px;
+}
+
+nav ul {
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: white;
+  margin-right: 20px;
+}
+
+nav ul a:hover {
+  color: rgb(222, 222, 29);
+}
+
+.slider-cont {
+  width: 100%;
+  height: 520px;
+  background-image: url("./slider.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-attachment: fixed;
+}
+
+.search-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 90px;
+  margin: 0px auto;
+}
+
+.search-control input {
+  outline: none;
+  width: 200px;
+  padding: 5px;
+  margin-top: 50px;
+}
+
+.header {
+  position: relative;
+  bottom: 20px;
+}
+
+.container-movie {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  place-items: center;
+}
+
+.left-right {
+  text-align: center;
+  margin-right: 50px;
+}
+
+.pageBtn {
+  font-size: 20px;
+  color: black;
+  background-color: white;
+  padding: 8px 16px;
+  border-radius: 30%;
+}
+
+.pageBtn a {
+  text-decoration: none;
+  padding: 10px;
+}
+
+.view-prod {
+  color: white;
+}
+
+.container-about {
+  text-align: center;
+  margin: 20px auto;
+  width: 60%;
+  padding: 40px;
+}
+
+.footer {
+  text-align: center;
+  background-color: rgb(7, 7, 7);
+  color: rgb(210, 208, 208);
+  margin-top: 50px;
+  padding: 1px;
 }
