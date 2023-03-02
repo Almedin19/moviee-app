@@ -56,54 +56,55 @@ function Products() {
             gap: "20px",
           }}
         >
-          {movies.map((movie) => (
-            <div key={movie.id}>
-              <div style={{ textAlign: "center" }}>
-                <Link to={`/product/${movie.id}`}>
-                  {movie.poster_path === null ? (
-                    <img
-                      src={noimage}
-                      alt={movie.original_title}
-                      style={{
-                        width: "230px",
-                        height: "270px",
-                        borderRadius: "10px",
-                      }}
-                    />
-                  ) : (
-                    <img
-                      src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-                      alt={movie.original_title}
-                      style={{
-                        width: "230px",
-                        height: "270px",
-                        borderRadius: "10px",
-                      }}
-                    />
-                  )}
-                </Link>
-                <h3>{movie.original_title}</h3>
-                <h3>
-                  <Link
-                    to={`/product/${movie.id}`}
-                    style={{
-                      textDecoration: "none",
-                      border: "1px solid rgb(222,222,29)",
-                      borderRadius: "10px",
-                      padding: "8px",
-                      color: "rgb(222,222,29)",
-                    }}
-                  >
-                    Details
+          {movies.length > 0 &&
+            movies.map((movie) => (
+              <div key={movie.id}>
+                <div style={{ textAlign: "center" }}>
+                  <Link to={`/product/${movie.id}`}>
+                    {movie.poster_path === null ? (
+                      <img
+                        src={noimage}
+                        alt={movie.original_title}
+                        style={{
+                          width: "230px",
+                          height: "270px",
+                          borderRadius: "10px",
+                        }}
+                      />
+                    ) : (
+                      <img
+                        src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+                        alt={movie.original_title}
+                        style={{
+                          width: "230px",
+                          height: "270px",
+                          borderRadius: "10px",
+                        }}
+                      />
+                    )}
                   </Link>
-                </h3>
-                <p style={{ color: "rgb(222,222,29)", fontSize: "16px" }}>
-                  Rating: {movie.vote_average}
-                </p>
-                <p>Popularity: {movie.popularity}</p>
+                  <h3>{movie.original_title}</h3>
+                  <h3>
+                    <Link
+                      to={`/product/${movie.id}`}
+                      style={{
+                        textDecoration: "none",
+                        border: "1px solid rgb(222,222,29)",
+                        borderRadius: "10px",
+                        padding: "8px",
+                        color: "rgb(222,222,29)",
+                      }}
+                    >
+                      Details
+                    </Link>
+                  </h3>
+                  <p style={{ color: "rgb(222,222,29)", fontSize: "16px" }}>
+                    Rating: {movie.vote_average}
+                  </p>
+                  <p>Popularity: {movie.popularity}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
       <Footer />

@@ -15,7 +15,7 @@ function Products() {
 
     axios
       .get(`${api_url}`)
-      .then((resp) => setMovie(resp.data.results.splice(0, 4)))
+      .then((resp) => setMovie(resp.data.results.splice(8, 4)))
       .catch((error) => console.log(error.message));
   }, [page]);
 
